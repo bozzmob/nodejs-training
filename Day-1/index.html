@@ -7,15 +7,16 @@
     <script>
         (function() {
             window.addEventListener("DOMContentLoaded", init);
-
             var btnDoWork = null,
-                divMessages = null;
+                divMessages = null,
+                workProgress = null;
 
             function init() {
                 btnDoWork = document.getElementById("btnDoWork");
                 btnDoWork.addEventListener("click", onBtnDoWorkClick);
 
                 divMessages = document.getElementById("divMessages");
+                workProgress = document.getElementById("workProgress");
             }
 
             function onBtnDoWorkClick() {
@@ -24,41 +25,55 @@
             }
 
             function triggerWork() {
-                doWork();
+                doWork(onWorkCompletion, onWorkProgress);
+            }
+
+            function onWorkCompletion() {
                 displayMessage("Work completed..!");
+            }
+
+            function onWorkProgress(percentCompleted) {
+                workProgress.value = percentCompleted;
             }
 
             function displayMessage(msg) {
                 divMessages.innerHTML += msg + "<br/>";
             }
 
-            function doWork() {
+            function doWork(onComplete, onProgress) {
                 var totalIterations = 1000,
-                    currentIteration = 0;
+                    currentIteration = 0,
+                    percentCompleted = 0;
 
                 function oneIteration() {
-                    for (var i = 0; i < 10000 / totalIterations; i++)
+                    for (var i = 0; i < (10000 / totalIterations); i++)
                         for (var j = 0; j < 10000; j++)
-                            for (var k = 0; k < 100; k++) {
-
-                            }
+                            for (var k = 0; k < 100; k++) {}
                             ++currentIteration;
+                    if (typeof onProgress === 'function') {
+                        percentCompleted = (currentIteration / totalIterations) * 100;
+                        onProgress(percentCompleted);
+                    }
                     if (currentIteration < totalIterations) {
                         setTimeout(oneIteration);
                     } else {
-                        console.log("Job Done");
+                        if (typeof onComplete === 'function')
+                            onComplete();
+                        console.log("Job done");
                     }
                 }
                 oneIteration();
             }
-
         })();
     </script>
 </head>
 
 <body>
-    <input type="text" id="ipBox">
+    <input type="text">
     <input type="button" value="Do Work" id="btnDoWork">
+    <div>
+        <progress id="workProgress" min="0" max="100" value="0"></progress>
+    </div>
     <div id="divMessages"></div>
 </body>
 
