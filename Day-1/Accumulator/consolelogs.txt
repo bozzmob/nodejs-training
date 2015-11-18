@@ -1,0 +1,25 @@
+satjagan@SATJAGAN-WS01 MINGW64 ~/Documents/GitHub/nodejs-training/Day-1/Accumulator (master)
+$ node
+> var ac = require('./accumulator');
+loading accumulator
+undefined
+> ac.add(100)
+undefined
+> ac.subtract(50)
+undefined
+> ac.divide(2)
+undefined
+> ac.multiply(10)
+undefined
+> ac.getResult()
+250
+> var ac2 = require('./accumulator');
+undefined
+> ac2
+{ add: [Function],
+  subtract: [Function],
+  multiply: [Function],
+  divide: [Function],
+  getResult: [Function] }
+> ac2.getResult()
+250
