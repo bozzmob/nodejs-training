@@ -1,0 +1,9 @@
+$ node AccumulatorClient.js
+loading accumulator
+ac1 init value 0
+100
+ac2
+loading accumulator
+ac2 init value 0
+300
+

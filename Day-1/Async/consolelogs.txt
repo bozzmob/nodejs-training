@@ -1,0 +1,31 @@
+> var x = require('./ErrorHandling');
+undefined
+> x.ad
+x.addClient      x.addSyncClient
+
+> x.addSyncClient(10,20);
+[SC] invoking add
+[SP] add invoked for  10  and  20
+[SP] returing the result
+[SC] result =  30
+undefined
+> x.addSyncClient(10);
+[SC] invoking add
+[SP] add invoked for  10  and  undefined
+[SC] something went wrong
+undefined
+> x.addClient(10,20);
+[SC] invoking add
+[SP] add invoked for  10  and  20
+[SC] finished triggerin add
+undefined
+> x.addClient(10,[SP] returing the result
+[SC] result =  30
+> x.addClient(10);
+[SC] invoking add
+[SP] add invoked for  10  and  undefined
+[SC] finished triggerin add
+undefined
+> [SC] something went wrong
+
+>
