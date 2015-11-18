@@ -29,3 +29,19 @@ Accumulator Factory commits-
 > Accumulator Factory - function wrapper
 
 > Accumulator Client - Now, the states of 2 variables are maintained
+
+Async commits-
+
+> Error Handling. *No Try-catch for Async!!*
+
+Print File commits-
+
+> Print to console
+> Print to console - Sync
+> Using streams
+
+Web Server commits-
+
+> Basic server
+> Calculator using GET
+> Calculator using POST
