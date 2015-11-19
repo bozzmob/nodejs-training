@@ -1,8 +1,22 @@
+<style>
+	.completed {
+		color : red;
+		text-decoration : line-through;
+		font-style : italic;
+		font-weight : bold;
+	}
+</style>
+
 <h1> {{title}} </h1>
 <hr>
 <div>{{list.length}} the tasks will be displayed here</div>
 <ol>
 	{{#each list}}
-	<li>{{this.name}}</li>
+		{{#if this.isCompleted}}
+			<li class='completed'>{{this.name}}</li>
+		{{else}}
+			<li>{{this.name}}</li>
+		{{/if}}
+	
 	{{/each}}
 </ol>
