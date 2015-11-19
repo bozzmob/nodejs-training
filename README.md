@@ -47,29 +47,62 @@ Web Server commits-
 > Calculator using POST
 
 
-//// To refactor
-
-
 Task Manager App-
-Task List
-Task Add
-Task Toggle
+> Task List
+> Task Add
+> Task Toggle
 
 Async-
-To learn about sync
+
+> To learn about sync and async ways of coding
 
 App Server-
-Modularized components from Day-1's Web server
 
----
-Morgan - Log file.
----
+> Modularized components from Day-1's Web server.
 
 Chat App info-
-To Run-
+> To create a multi client chat application. The ultimate feature would be a message broadcasting app, something like a group chat.
 
-http-server -p 7890
-node app.js
+> To Run-
+> *http-server -p 7890*
+> *node app.js*
+
+
+Net App info-
+> Run app-
+> *node server.js test.txt*
+> Another console-
+> *telnet localhost:8080*
+> 
+> Change the file. New values will reflect. Telnet is the client here. You can replace telnet with your own client.
+> now run client-
+> *node client.js*
+> 
+> Change the file. New values will reflect.
+
+Net App Custom Parser info-
+> We send 19 chars first, then next 20 chars.
+> Here, we emit events using *events.EventEmitter.*
+> 
+> *util.inherits(MessageParser, EventEmitter);*
+> *MessageParser - destination*
+> *EventEmitter - where to inherit from*
+> 
+> Server-
+> *node server.js*
+> 
+> Client-
+> *node client.js*
+> 
+> Now change file. After 3 secs we'll see it in the client.
+
+---
+
+// To refactor
+
+Books-
+Nodebook
+Nodejs in Action
 
 use clusters for scalability
 nodejs.org/api/cluster.html
@@ -79,40 +112,3 @@ run- node app
 open task manager and see in processes. you will have multiple processes.
 
 Use PM2 - Load balancer + Helps in Scalings
-
----
-Net App info-
-Run app-
-node server.js test.txt
-Another console-
-telnet localhost:8080
-
-Change the file. New values will reflect. Telnet is the client here. You can replace telnet with your own client.
-now run client-
-node client.js
-
-Change the file. New values will reflect.
-
----
-
-Custom Parser-
-Send 20 chars first, then next 20 chars.
-Here, we emit events using events.EventEmitter.
-
-util.inherits(MessageParser, EventEmitter);
-MessageParser - destination
-EventEmitter - where to inherit from
-
-Server-
-node server.js
-
-Client-
-node client.js
-
-Now change file. After 3 secs we'll see it in the client.
-
----
-
-Books-
-Nodebook
-Nodejs in Action
