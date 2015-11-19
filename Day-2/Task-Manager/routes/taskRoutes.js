@@ -29,10 +29,19 @@ router.post('/new', function(req, res, next) {
   	name : taskName,
   	isCompleted : false
   };
-
   taskStore.push(newTask);
   res.redirect('/tasks');
+});
 
+router.get('/toggle/:id', function(req, res, next) {
+  //res.send('All the tasks will be displayed here');
+  var taskId = parseInt(req.params.id, 10);
+  var task = taskStore.filter(function(task){
+  	return task.id === taskId;
+  })[0];
+  if(task)
+  	task.isCompleted = !task.isCompleted;
+  res.redirect('/tasks');
 });
 
 module.exports = router;
