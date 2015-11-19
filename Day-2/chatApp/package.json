@@ -1,0 +1,17 @@
+{
+  "name": "12-chatApp",
+  "version": "1.0.0",
+  "description": "a sample chat app serve",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "websocket"
+  ],
+  "author": "Magesh K",
+  "license": "MIT",
+  "dependencies": {
+    "nodejs-websocket": "^1.4.0"
+  }
+}

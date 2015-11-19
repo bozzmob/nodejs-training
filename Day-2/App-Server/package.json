@@ -1,0 +1,21 @@
+{
+  "name": "09-appServer",
+  "version": "1.0.0",
+  "description": "a sample applicaiton",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "webapp",
+    "example",
+    "demo"
+  ],
+  "author": "Magesh K",
+  "license": "MIT",
+  "dependencies": {
+    "accepts": "^1.3.0",
+    "escape-html": "^1.0.3"
+  }
+}
