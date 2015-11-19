@@ -2,7 +2,7 @@
 
 Basic concepts of Node and understanding how it works
 
-Scheduler commits(Client JS)-
+####Scheduler commits(Client JS)-
 
 > 3 jobs to be done (Work starter, Empty for loop, Work Completed)
 
@@ -10,57 +10,65 @@ Scheduler commits(Client JS)-
 
 > Create callback function for onWorkCompletion and onWorkProgress
 
-Node-Intro commits-
+####Node-Intro commits-
 
 > A simple Hello World module
 
-Calculator commits-
+####Calculator commits-
 
 > A basic Calculator
 
 > Node Module
 
-Accumulator commits-
+####Accumulator commits-
 
 > A basic accumulator
 
-Accumulator Factory commits-
+####Accumulator Factory commits-
 
 > Accumulator Factory - function wrapper
 
 > Accumulator Client - Now, the states of 2 variables are maintained
 
-Async commits-
+####Async commits-
 
 > Error Handling. *No Try-catch for Async!!*
 
-Print File commits-
+####Print File commits-
 
 > Print to console
+
 > Print to console - Sync
+
 > Using streams
 
-Web Server commits-
+####Web Server commits-
 
 > Basic server
+
 > Calculator using GET
+
 > Calculator using POST
 
 
-Task Manager App-
+####Task Manager App-
+
 > Task List
+
 > Task Add
+
 > Task Toggle
 
-Async-
+####Async-
 
 > To learn about sync and async ways of coding
 
-App Server-
+####App Server-
 
 > Modularized components from Day-1's Web server.
 
-Chat App info-
+####Chat App info-
+
 > To create a multi client chat application. The ultimate feature would be a message broadcasting app, something like a group chat.
 
 > To Run-
@@ -68,47 +76,71 @@ Chat App info-
 > *node app.js*
 
 
-Net App info-
+####Net App info-
+
 > Run app-
+
 > *node server.js test.txt*
+
 > Another console-
+
 > *telnet localhost:8080*
 > 
 > Change the file. New values will reflect. Telnet is the client here. You can replace telnet with your own client.
+
 > now run client-
+
 > *node client.js*
 > 
 > Change the file. New values will reflect.
 
-Net App Custom Parser info-
+####Net App Custom Parser info-
+
 > We send 19 chars first, then next 20 chars.
+
 > Here, we emit events using *events.EventEmitter.*
 > 
 > *util.inherits(MessageParser, EventEmitter);*
+
 > *MessageParser - destination*
+
 > *EventEmitter - where to inherit from*
 > 
 > Server-
+
 > *node server.js*
 > 
 > Client-
+
 > *node client.js*
 > 
 > Now change file. After 3 secs we'll see it in the client.
 
----
+####Cluster info-
 
-// To refactor
+> Use clusters for scalability
 
-Books-
-Nodebook
-Nodejs in Action
+> nodejs.org/api/cluster.html
 
-use clusters for scalability
-nodejs.org/api/cluster.html
-Fork the master cluster.isMaster using cluster.fork([env]). Forked one's isMaster api will return false. Number of forks = Number of CPU's(value got by - os.cpus()).
-run- node app
+> Fork the master cluster.isMaster using cluster.fork([env]). Forked one's isMaster api will return false. Number of forks = Number of CPU's(value got by - os.cpus()).
 
-open task manager and see in processes. you will have multiple processes.
+> run the server-
 
-Use PM2 - Load balancer + Helps in Scalings
+> *node app*
+
+> open task manager and see in processes. you will have multiple processes.
+
+> **Use PM2 - Load balancer + Helps in Scalings**
+
+
+####Books-
+
+> Nodebook
+
+> Nodejs in Action
+
+####Videos-
+
+> javascript - http://bit.ly/javascript-training-videos
+
+> nodejs - http://bit.ly/node-training-videos
