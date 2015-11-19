@@ -132,6 +132,9 @@ Basic concepts of Node and understanding how it works
 
 > **Use PM2 - Load balancer + Helps in Scalings**
 
+####Socket.IO example-
+
+> [Socket.IO chat example](https://github.com/tkmagesh/Cisco-Node-Oct-2015/tree/master/Day-02/18-Socket-IO)
 
 ####Books-
 
