@@ -10,6 +10,7 @@ function isStatic(resPath){
     return staticExtns.indexOf(path.extname(resPath)) != -1;
 }
 var server = http.createServer(function(req, res){
+    req.url = req.url === '/' ? '/index.html' : req.url;
     var urlObj = url.parse(req.url, true);
     if (isStatic(urlObj.pathname)){
         var filename = path.join(__dirname, urlObj.pathname);
