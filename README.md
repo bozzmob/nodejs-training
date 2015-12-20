@@ -138,9 +138,9 @@ Basic concepts of Node and understanding how it works
 
 ####Books-
 
-> Nodebook
+> [Nodebook](https://www.google.co.in/?q=node+book#)
 
-> Nodejs in Action
+> [Nodejs in Action](https://www.google.co.in/?q=node+js+in+action#)
 
 ####Videos-
 
